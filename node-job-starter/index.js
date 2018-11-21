@@ -15,7 +15,7 @@ const getUsers = () => {
   request(options, function (error, response, body) {
     if (error) throw new Error(error);
 
-    sendMail();
+    sendMail(JSON.stringify(body, null, 3));
     console.log(body);
   });
 }
